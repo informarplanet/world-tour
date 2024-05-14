@@ -16,7 +16,7 @@ export default function Country ({country}){
         <img src={flags?.png} alt="" srcset="" />
         <br />
         <button onClick={handleVisite }> {Visite?'Visite':'Going'}</button>
-        <p></p>
+        {Visite?'i alredy Visite this country':'Going to this country'}
         </>
     )
 }
