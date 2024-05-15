@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Country ({country}){
+export default function Country ({country, handleVisited}){
     // console.log(country)
     const {flags, name}=country;
 
@@ -15,8 +15,9 @@ export default function Country ({country}){
          <p>Name: {name?.common}</p>
         <img src={flags?.png} alt="" srcset="" />
         <br />
-        <button onClick={handleVisite }> {Visite?'Visite':'Going'}</button>
+        <button onClick={()=>{handleVisite(); handleVisited(name)}}> {Visite?'Visite':'Going'}</button>
         {Visite?'i alredy Visite this country':'Going to this country'}
+        {/* <button onClick={()=>handleVisited(name)}>mark as visite</button> */}
         </>
     )
 }
