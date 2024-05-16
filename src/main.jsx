@@ -13,6 +13,7 @@ const router=createBrowserRouter([
     element: <App></App>,
     children:[{
       path:'/home',
+      loader:()=>fetch('https://restcountries.com/v3.1/all'),
       element:<Home></Home>
     },
     {
